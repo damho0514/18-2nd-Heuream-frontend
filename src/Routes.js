@@ -15,7 +15,7 @@ function Routes() {
         <Route exact path="/Nav" component={Nav} />
         <Route exact path="/Footer" component={Footer} />
         <Route exact path="/Loading" component={Loading} />
-        <Route exact path="/Shop" component={Shop} />
+        <Route exact path="/" component={Shop} />
         <Route exact path="/Login" component={Login} />
         <Route exact path="/MyPage" component={MyPage} />
         <Route exact path="/Product" component={Product} />
