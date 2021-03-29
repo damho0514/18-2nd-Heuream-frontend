@@ -1,70 +1,87 @@
-# Getting Started with Create React App
+# 🏡 Team HEUREAM
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
+- 진행기간 : 2021년 3월 29일 ~ 2021년 4월 09일 (11일)
 
-In the project directory, you can run:
+<br>
 
-### `npm start`
+## 🔜 FrontEnd
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- 양지은
+- 배담호
+- 정재욱
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<br>
 
-### `npm test`
+## 🔙 BackEnd
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- 허정원
+- 김규동
 
-### `npm run build`
+  <br>
+  <br>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# 🌟: 팀원 별 작업 현황
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **양지은**
+- nav, footer, 소셜로그인 페이지
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+- **배담호**
+- 상품 리스트 페이지 (메인)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+---
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **정재욱**
+- 상품 상세 페이지
+  <br>
+  <br>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+# 🌟프로젝트 소개
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+> **한정판 &nbsp;거래 &nbsp;플랫폼 &nbsp;`KREAM` &nbsp;클론 &nbsp;프로젝트** <br>  
+> <br>
 
-## Learn More
+## Goals :
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+> 메인 상품 리스트 페이지 → 유저 로그인 → 상품 검색 → 상품 상세 페이지 → <br>
+> 관심 상품 확인 <br>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<br>
+<br>
 
-### Code Splitting
+# 🛠 기술 스택
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## FrontEnd 기술 스택
 
-### Analyzing the Bundle Size
+- React
+- React Router
+- Styled-component
+- chart.js
+- Naver login
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+<br>
 
-### Making a Progressive Web App
+# 🌈 구현 기능
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- 회원가입 페이지
+- 로그인 페이지
+- Navigation Bar
+- Footer
+- 상품 리스트 페이지 (+필터링 기능)
+- 상품 상세 페이지 구현
+- 관심 상품 구현
 
-### Advanced Configuration
+<br>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+🌟: 팀원별 GitHub, 블로그 주소
 
-### Deployment
+- 양지은 : [양지은 velog](https://velog.io/@poohv7)
+- 배담호 : [배담호 velog](https://velog.io/@damho0514)
+- 정재욱 : [정재욱 GitHub](https://github.com/stich9208)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+# ‼️ Reference
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+> 이 프로젝트는 KREAM 사이트를 참조하여 학습목적으로 만들었습니다.<br> 실무수준의 프로젝트이지만 학습용으로 만들었기 때문에 이 코드를 활용하여 이득을 취하거나 무단 배포할 경우 법적으로 문제될 수 있습니다. <br> 이 프로젝트에서 사용하고 있는 사진 대부분은 위코드에서 구매한 것이므로 해당 프로젝트 외부인이 사용할 수 없습니다.
