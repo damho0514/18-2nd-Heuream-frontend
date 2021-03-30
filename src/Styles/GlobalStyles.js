@@ -24,11 +24,11 @@ const GlobalStyles = createGlobalStyle`
         height: 100%;
     }
     input, button {
-        background-color: transparent;
+        border:none;
+        outline:none;
+        cursor: pointer;
+
     }
-    h1, h2, h3, h4, h5, h6 {
-    font-family:'Maven Pro', sans-serif;
-  }
 `;
 
 export default GlobalStyles;
