@@ -2,6 +2,7 @@ import React from "react";
 import { withRouter } from "react-router-dom";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import Nav from "../../Components/Nav/Nav";
 import * as config from "../../config";
 import { FaNeos } from "react-icons/fa";
 
@@ -78,52 +79,55 @@ class Login extends React.Component {
 
   render() {
     return (
-      <LoginArea>
-        <LoginTitle>HEUREAM</LoginTitle>
-        <ButtonInputBox>
-          <InputTitle>이메일 주소</InputTitle>
-          <InputTxt
-            name="email"
-            type="text"
-            placeholder="예) heuream@heuream.co.kr"
-            onChange={this.handleInputValue}
-          />
-          {this.state.email && this.state.email.includes("@") ? null : (
-            <div style={{ color: "red", fontSize: "10px" }}>
-              이메일 형식을 지켜주세요.
-            </div>
-          )}
-        </ButtonInputBox>
-        <ButtonInputBox>
-          <InputTitle>비밀번호</InputTitle>
-          <InputTxt
-            name="pw"
-            type="password"
-            onChange={this.handleInputValue}
-          />
-          {this.state.pw && this.state.pw.length >= 8 ? null : (
-            <div style={{ color: "red", fontSize: "10px" }}>
-              비밀번호 형식을 지켜주세요.
-            </div>
-          )}
-        </ButtonInputBox>
-        <LoginBtnBox>
-          <LoginBtn
-            email={this.state.email}
-            pw={this.state.pw}
-            onClick={this.goToMain}
-          >
-            로그인
-          </LoginBtn>
-          <NaverBtn onClick={() => this.goToKakao()}>
-            <FaNeos />
-            네이버 로그인
-          </NaverBtn>
-        </LoginBtnBox>
-        <Join>
-          <Link to="/join">이메일 가입</Link>
-        </Join>
-      </LoginArea>
+      <>
+        <Nav />
+        <LoginArea>
+          <LoginTitle>HEUREAM</LoginTitle>
+          <ButtonInputBox>
+            <InputTitle>이메일 주소</InputTitle>
+            <InputTxt
+              name="email"
+              type="text"
+              placeholder="예) heuream@heuream.co.kr"
+              onChange={this.handleInputValue}
+            />
+            {this.state.email && this.state.email.includes("@") ? null : (
+              <div style={{ color: "red", fontSize: "10px" }}>
+                이메일 형식을 지켜주세요.
+              </div>
+            )}
+          </ButtonInputBox>
+          <ButtonInputBox>
+            <InputTitle>비밀번호</InputTitle>
+            <InputTxt
+              name="pw"
+              type="password"
+              onChange={this.handleInputValue}
+            />
+            {this.state.pw && this.state.pw.length >= 8 ? null : (
+              <div style={{ color: "red", fontSize: "10px" }}>
+                비밀번호 형식을 지켜주세요.
+              </div>
+            )}
+          </ButtonInputBox>
+          <LoginBtnBox>
+            <LoginBtn
+              email={this.state.email}
+              pw={this.state.pw}
+              onClick={this.goToMain}
+            >
+              로그인
+            </LoginBtn>
+            <NaverBtn onClick={() => this.goToKakao()}>
+              <FaNeos />
+              네이버 로그인
+            </NaverBtn>
+          </LoginBtnBox>
+          <Join>
+            <Link to="/join">이메일 가입</Link>
+          </Join>
+        </LoginArea>
+      </>
     );
   }
 }

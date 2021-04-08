@@ -1,5 +1,6 @@
 import React from "react";
 import Modal from "../Login/Modal";
+import Nav from "../../Components/Nav/Nav";
 import styled from "styled-components";
 import { FiCheckSquare } from "react-icons/fi";
 
@@ -137,78 +138,81 @@ class Join extends React.Component {
       ? "checkOnSecond"
       : "checkOff";
     return (
-      <JoinArea>
-        <JoinTitle>회원가입</JoinTitle>
-        <ButtonInputBox>
-          <InputTitle>이메일 주소*</InputTitle>
-          <InputTxt
-            name="email"
-            type="text"
-            placeholder="예) heuream@heuream.co.kr"
-            onChange={this.handleInputValue}
-          />
-          {this.state.email && this.state.email.includes("@") ? null : (
-            <div style={{ color: "red", fontSize: "10px" }}>
-              이메일 형식을 지켜주세요.
-            </div>
-          )}
-        </ButtonInputBox>
-        <ButtonInputBox>
-          <InputTitle>비밀번호*</InputTitle>
-          <InputTxt
-            name="pw"
-            type="password"
-            placeholder="영문,숫자,특수문자 조합 8-16자"
-            onChange={this.handleInputValue}
-          />
-          {this.state.pw && this.state.pw.length >= 8 ? null : (
-            <div style={{ color: "red", fontSize: "10px" }}>
-              비밀번호 형식을 지켜주세요.
-            </div>
-          )}
-        </ButtonInputBox>
-        <ButtonInputBox>
-          <InputTitle>스니커즈 사이즈 (선택)</InputTitle>
-          <Modal
-            handleModal={this.handleModal}
-            modalOn={this.state.modalOn}
-            sizeClick={this.state.sizeClick}
-          />
-          <InputTxt
-            type="text"
-            placeholder="선택하세요"
-            onClick={this.handleModal}
-            value={this.state.sizeClick}
-          ></InputTxt>
-        </ButtonInputBox>
-        <JoinWrap>
-          <LabelTxt>
-            <FiCheckSquare
-              className={btnChange}
-              size="20px"
-              onClick={this.boxClick}
+      <>
+        <Nav />
+        <JoinArea>
+          <JoinTitle>회원가입</JoinTitle>
+          <ButtonInputBox>
+            <InputTitle>이메일 주소*</InputTitle>
+            <InputTxt
+              name="email"
+              type="text"
+              placeholder="예) heuream@heuream.co.kr"
+              onChange={this.handleInputValue}
             />
-            &nbsp;&nbsp;[필수] 만 14세 이상이며 모두 동의합니다.
-          </LabelTxt>
-          <LabelTxt2>
-            <FiCheckSquare
-              className={btnChangeSecond}
-              size="20px"
-              onClick={this.boxClickSecond}
+            {this.state.email && this.state.email.includes("@") ? null : (
+              <div style={{ color: "red", fontSize: "10px" }}>
+                이메일 형식을 지켜주세요.
+              </div>
+            )}
+          </ButtonInputBox>
+          <ButtonInputBox>
+            <InputTitle>비밀번호*</InputTitle>
+            <InputTxt
+              name="pw"
+              type="password"
+              placeholder="영문,숫자,특수문자 조합 8-16자"
+              onChange={this.handleInputValue}
             />
-            &nbsp;&nbsp;[선택] 광고성 정보 수신에 모두 동의합니다.
-          </LabelTxt2>
-        </JoinWrap>
-        <JoinBtnBox>
-          <JoinBtn
-            email={this.state.email}
-            pw={this.state.pw}
-            onClick={this.signUp}
-          >
-            회원가입
-          </JoinBtn>
-        </JoinBtnBox>
-      </JoinArea>
+            {this.state.pw && this.state.pw.length >= 8 ? null : (
+              <div style={{ color: "red", fontSize: "10px" }}>
+                비밀번호 형식을 지켜주세요.
+              </div>
+            )}
+          </ButtonInputBox>
+          <ButtonInputBox>
+            <InputTitle>스니커즈 사이즈 (선택)</InputTitle>
+            <Modal
+              handleModal={this.handleModal}
+              modalOn={this.state.modalOn}
+              sizeClick={this.state.sizeClick}
+            />
+            <InputTxt
+              type="text"
+              placeholder="선택하세요"
+              onClick={this.handleModal}
+              value={this.state.sizeClick}
+            ></InputTxt>
+          </ButtonInputBox>
+          <JoinWrap>
+            <LabelTxt>
+              <FiCheckSquare
+                className={btnChange}
+                size="20px"
+                onClick={this.boxClick}
+              />
+              &nbsp;&nbsp;[필수] 만 14세 이상이며 모두 동의합니다.
+            </LabelTxt>
+            <LabelTxt2>
+              <FiCheckSquare
+                className={btnChangeSecond}
+                size="20px"
+                onClick={this.boxClickSecond}
+              />
+              &nbsp;&nbsp;[선택] 광고성 정보 수신에 모두 동의합니다.
+            </LabelTxt2>
+          </JoinWrap>
+          <JoinBtnBox>
+            <JoinBtn
+              email={this.state.email}
+              pw={this.state.pw}
+              onClick={this.signUp}
+            >
+              회원가입
+            </JoinBtn>
+          </JoinBtnBox>
+        </JoinArea>
+      </>
     );
   }
 }
