@@ -52,7 +52,6 @@ function Product({
         {modal ? (
           <Modal
             modal={modal}
-            // handleModal={handleModal}
             handleCloseModal={handleCloseModal}
             sizeList={sizeList}
             english_name={english_name}

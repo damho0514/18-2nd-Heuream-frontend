@@ -7,12 +7,11 @@ import { FaUndo } from "react-icons/fa";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { RiArrowUpDownLine } from "react-icons/ri";
 
-//rcs
 const LIMIT = 20;
 function Shop() {
   const dropdownRef = useRef(null);
   const [isSugestActive, setIsSugestActive] = useState(dropdownRef, false); //인기 드롭다운
-  const [isActive, setIsActive] = useState(false); //첫번째 드롭다운
+  const [isActive, setIsActive] = useState(false); //첫번째 드롭
   const [isSizeActive, setIsSizeActive] = useState(false); //두번째 드롭다운
   const [isPriceActive, setIsPriceActive] = useState(false); //세번째 드롭다운
   const [shop, setShop] = useState([]);
@@ -43,21 +42,6 @@ function Shop() {
     setSolt(e.target.dataset.type);
     setMenusolt(e.target.dataset.name);
   };
-  // const getShopList = () => {
-  //   const offset = curruntIdx;
-  //   const query = `?limit=${LIMIT}&offset=${offset}`;
-
-  //   fetch(`http://10.58.5.186:8000/product?brand=1&brand_line=1${query}`)
-  //     .then(res => res.json())
-  //     .then(res => setShop([...shop, ...res.result]));
-
-  // };
-
-  // const getShop = () => {
-  //   fetch("data/commentData.json")
-  //     .then(res => res.json())
-  //     .then(res => setShop(res));
-  // };
 
   const getShopList = () => {
     const offset = curruntIdx;
@@ -66,12 +50,6 @@ function Shop() {
       .then(res => res.json())
       .then(res => setShop([...shop, ...res.result]));
   };
-
-  // const getShop = () => {
-  //   fetch("http://10.58.4.174:8000/product")
-  //     .then(res => res.json())
-  //     .then(res => setShop(res.result));
-  // };
 
   useEffect(() => {
     setMenusolt();
@@ -85,13 +63,6 @@ function Shop() {
       .then(res => res.json())
       .then(res => setShop([...res.result]));
   }, [menusolt]);
-
-  // useEffect(() => {
-  //   setMenusolt();
-  //   fetch(`data/commentData.json${menusolt}`)
-  //     .then(res => res.json())
-  //     .then(res => setShop([...res]));
-  // }, [menusolt]);
 
   const getShop = () => {
     fetch("http://13.209.87.62:8000/product", {
