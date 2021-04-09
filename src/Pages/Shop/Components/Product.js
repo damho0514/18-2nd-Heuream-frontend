@@ -19,7 +19,7 @@ function Product({
   const [colorcheck, setColorCheck] = useState(false);
 
   const history = useHistory();
-
+  //
   const handleModal = () => {
     if (localStorage.getItem("access_token")) {
       fetch(`http://13.209.87.62:8000/product/${product_id}`, {
