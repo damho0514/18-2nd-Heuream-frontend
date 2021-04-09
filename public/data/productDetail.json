@@ -1,0 +1,166 @@
+{
+  "id": 1,
+  "product_image_url": "https://images.unsplash.com/photo-1560769629-975ec94e6a86?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8c2hvZXN8ZW58MHx8MHw%3D&auto=format&fit=crop&w=500&q=60",
+  "korean_name": "나이키 에어맥스 90 NRG 베이컨",
+  "english_name": "Nike Air Max 90 NRG Bacon",
+  "brand": "nike",
+  "model_number": "CU1816-100",
+  "best_color": "SAIL",
+  "release_date": "21/04/02",
+  "release_price": 27000,
+  "direct_buy_price": "4000000",
+  "direct_sale_price": "5950000",
+  "sizeList": [
+    240,
+    245,
+    250,
+    255,
+    260,
+    265,
+    270,
+    275,
+    280,
+    285,
+    290,
+    295,
+    300,
+    305,
+    310
+  ],
+  "bidded": [
+    {
+      "bidded_size": "270",
+      "bidded_price": "275000",
+      "bidded_date": "21/01/12"
+    },
+    {
+      "bidded_size": "230",
+      "bidded_price": "300000",
+      "bidded_date": "21/02/24"
+    },
+    {
+      "bidded_size": "250",
+      "bidded_price": "310000",
+      "bidded_date": "21/02/25"
+    },
+    {
+      "bidded_size": "290",
+      "bidded_price": "260000",
+      "bidded_date": "21/03/18"
+    }
+  ],
+  "buy_bidding": [
+    {
+      "buy_bidding_size": "270",
+      "buy_bidding_price": "275000",
+      "buy_bidding_quantity": 2
+    },
+    {
+      "buy_bidding_size": "230",
+      "buy_bidding_price": "180000",
+      "buy_bidding_quantity": 1
+    },
+    {
+      "buy_bidding_size": "250",
+      "buy_bidding_price": "310000",
+      "buy_bidding_quantity": 3
+    },
+    {
+      "buy_bidding_size": "290",
+      "buy_bidding_price": "260000",
+      "buy_bidding_quantity": 1
+    }
+  ],
+  "sale_bidding": [
+    {
+      "sale_bidding_size": "270",
+      "sale_bidding_price": "275000",
+      "sale_bidding_quantity": 5
+    },
+    {
+      "sale_bidding_size": "230",
+      "sale_bidding_price": "275000",
+      "sale_bidding_quantity": 2
+    },
+    {
+      "sale_bidding_size": "250",
+      "sale_bidding_price": "310000",
+      "sale_bidding_quantity": 3
+    },
+    {
+      "sale_bidding_size": "290",
+      "sale_bidding_price": "300000",
+      "sale_bidding_quantity": 2
+    }
+  ],
+  "chartData": [
+    {
+      "value": 1,
+      "date": "20/01/12"
+    },
+    {
+      "value": 2,
+      "date": "20/05/15"
+    },
+    {
+      "value": 5,
+      "date": "20/06/23"
+    },
+    {
+      "value": 20,
+      "date": "20/07/24"
+    },
+    {
+      "value": 13,
+      "date": "20/08/24"
+    },
+    {
+      "value": 43,
+      "date": "20/09/30"
+    },
+    {
+      "value": 23,
+      "date": "20/12/12"
+    },
+    {
+      "value": 16,
+      "date": "21/01/12"
+    },
+    {
+      "value": 36,
+      "date": "21/01/24"
+    },
+    {
+      "value": 50,
+      "date": "21/02/01"
+    },
+    {
+      "value": 28,
+      "date": "21/02/05"
+    },
+    {
+      "value": 19,
+      "date": "21/02/18"
+    },
+    {
+      "value": 10,
+      "date": "21/02/23"
+    },
+    {
+      "value": 39,
+      "date": "21/03/12"
+    },
+    {
+      "value": 43,
+      "date": "21/03/24"
+    },
+    {
+      "value": 23,
+      "date": "21/03/30"
+    },
+    {
+      "value": 8,
+      "date": "21/04/01"
+    }
+  ]
+}
