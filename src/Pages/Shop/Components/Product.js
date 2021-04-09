@@ -1,24 +1,28 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import { useHistory } from "react-router-dom";
 import Modal from "./Modal";
 import { VscBookmark } from "react-icons/vsc";
 import { IoBookmarkSharp } from "react-icons/io5";
 
 function Product({
-  getShop,
+  // getShop,
+  // handleCloseModal,
+  setBookmark,
   is_wished,
   product_id,
   product_image_url,
   brand_image_url,
   english_name,
   price,
-  size_id,
 }) {
   const [modal, setModal] = useState(false);
+  // const [colorcheck, setColorCheck] = useState(false);
+
   const [sizeList, setSizeList] = useState([]);
   // const [colorCheck, setColorCheck] = useState(is_wished);
 
-  // const history = useHistory();
+  const history = useHistory();
 
   // 찜하기 요청
   // const handleBookColor = () => {
@@ -29,25 +33,32 @@ function Product({
   //   // .then(res => );
   //   getShop();
   // // };
+  // const handleCloseModal = () => {
+  //   setColorCheck(!colorcheck);
+  //   setModal(!modal);
+  // };
 
   const handleModal = () => {
-    // console.log("클릭1");
-    fetch(`http://10.58.7.188:8000/product/${product_id}`, {
-      headers: {
-        Authorization:
-          "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.IOGSFnezOAETXOTTFMJYwb7nv6lG14FqtahkW9ATL7s",
-      },
-    })
-      .then(res => res.json())
-      .then(res => {
-        setSizeList(res.result);
-      });
-    setModal(!modal);
+    if (localStorage.getItem("access_token")) {
+      fetch(`http://13.209.87.62:8000/product/${product_id}`, {
+        headers: {
+          Authorization:
+            "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.IOGSFnezOAETXOTTFMJYwb7nv6lG14FqtahkW9ATL7s",
+        },
+      })
+        .then(res => res.json())
+        .then(res => {
+          setSizeList(res.result);
+          setModal(!modal);
+        });
+    } else {
+      history.push("/login");
+    }
   };
 
   const handleCloseModal = () => {
     setModal(!modal);
-    getShop();
+    // getShop();
   };
   // fetch("data/commentData.json")
   //   .then(res => res.json())
@@ -77,7 +88,6 @@ function Product({
             handleModal={handleModal}
             handleCloseModal={handleCloseModal}
             sizeList={sizeList}
-            product_image_url={product_image_url}
             english_name={english_name}
             product_id={product_id}
           />

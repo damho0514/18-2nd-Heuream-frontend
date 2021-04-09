@@ -7,14 +7,16 @@ const ModalChild = ({ product_id, size_id, size_name, handleBookColor }) => {
   const [bookmark, setBookmark] = useState(false);
 
   const handleBookClick = () => {
-    fetch(`http://10.58.7.188:8000/product/${product_id}?size_id=${size_id}`, {
-      method: "POST",
-      headers: {
-        Authorization:
-          "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.IOGSFnezOAETXOTTFMJYwb7nv6lG14FqtahkW9ATL7s",
-      },
-    });
     setBookmark(!bookmark);
+    // console.log(e.target.dataset.type);
+    // console.log("클릭");
+    // fetch(`http://192.168.0.33:8000/product/${product_id}?size_id=${size_id}`, {
+    //   method: "POST",
+    //   headers: {
+    //     Authorization:
+    //       "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.IOGSFnezOAETXOTTFMJYwb7nv6lG14FqtahkW9ATL7s",
+    // },
+    // });
   };
 
   return (

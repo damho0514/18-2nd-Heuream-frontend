@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import styled from "styled-components";
+import Nav from "../../Components/Nav/Nav";
 import ProductList from "../Shop/Components/ProductList";
 import ButtonPage from "../Shop/Components/ButtonPage";
 import { FaUndo } from "react-icons/fa";
@@ -58,14 +59,10 @@ function Shop() {
   //     .then(res => setShop(res));
   // };
 
-  useEffect(() => {
-    getShop();
-  }, []);
-
   const getShopList = () => {
     const offset = curruntIdx;
     const query = `?limit=${LIMIT}&offset=${offset}`;
-    fetch(`http://10.58.7.188:8000/product${query}`)
+    fetch(`http://13.209.87.62:8000/product${query}`)
       .then(res => res.json())
       .then(res => setShop([...shop, ...res.result]));
   };
@@ -78,7 +75,7 @@ function Shop() {
 
   useEffect(() => {
     setMenusolt();
-    fetch(`http://10.58.7.188:8000/product?sort=${menusolt}`, {
+    fetch(`http://13.209.87.62:8000/product?sort=${menusolt}`, {
       method: "GET",
       headers: {
         Authorization:
@@ -97,7 +94,7 @@ function Shop() {
   // }, [menusolt]);
 
   const getShop = () => {
-    fetch("http://10.58.7.188:8000/product", {
+    fetch("http://13.209.87.62:8000/product", {
       method: "GET",
       headers: {
         Authorization:
@@ -107,6 +104,10 @@ function Shop() {
       .then(res => res.json())
       .then(res => setShop([...res.result]));
   };
+
+  useEffect(() => {
+    getShop();
+  }, []);
 
   const sortList = [
     { title: "인기순", value: "Popular" },
@@ -118,6 +119,8 @@ function Shop() {
   return (
     shop.length !== 0 && (
       <section>
+        <Nav></Nav>
+        <BoxContents />
         <FilterBox>
           <ResetBox>
             <p className="resetIcons">
@@ -229,7 +232,9 @@ function Shop() {
     )
   );
 }
-
+const BoxContents = styled.div`
+  height: 90px;
+`;
 const RightBox = styled.div`
   width: 100px;
   margin-left: 1000px;
