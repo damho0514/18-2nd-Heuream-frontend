@@ -6,8 +6,6 @@ import { VscBookmark } from "react-icons/vsc";
 import { IoBookmarkSharp } from "react-icons/io5";
 
 function Product({
-  // getShop,
-  // handleCloseModal,
   setBookmark,
   is_wished,
   product_id,
@@ -17,26 +15,10 @@ function Product({
   price,
 }) {
   const [modal, setModal] = useState(false);
-  // const [colorcheck, setColorCheck] = useState(false);
-
   const [sizeList, setSizeList] = useState([]);
-  // const [colorCheck, setColorCheck] = useState(is_wished);
+  const [colorcheck, setColorCheck] = useState(false);
 
   const history = useHistory();
-
-  // 찜하기 요청
-  // const handleBookColor = () => {
-  //   // console.log("클릭2");
-  //   fetch(
-  //     `http:10.58.7.188:8000/product/${product_id}?size_id=${size_id}`
-  //   ).then(res => res.json);
-  //   // .then(res => );
-  //   getShop();
-  // // };
-  // const handleCloseModal = () => {
-  //   setColorCheck(!colorcheck);
-  //   setModal(!modal);
-  // };
 
   const handleModal = () => {
     if (localStorage.getItem("access_token")) {
@@ -58,23 +40,8 @@ function Product({
 
   const handleCloseModal = () => {
     setModal(!modal);
-    // getShop();
+    setColorCheck(!colorcheck);
   };
-  // fetch("data/commentData.json")
-  //   .then(res => res.json())
-  //   .then(res => setSizeList([...sizeList, ...res]));
-
-  // fetch(`http://10.58.7.188:8000/product/${product_id}?size_id=${size_id}`, {
-  //   method: "POST",
-  //   headers: {
-  //     Authorization:
-  //       "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.IOGSFnezOAETXOTTFMJYwb7nv6lG14FqtahkW9ATL7s",
-  //   },
-  // })
-  //   .then(res => res.json())
-  //   .then(res => setSizeList([...sizeList, ...res.result]));
-
-  // console.log(sizeList);
 
   return (
     <ProductBox>
@@ -85,7 +52,7 @@ function Product({
         {modal ? (
           <Modal
             modal={modal}
-            handleModal={handleModal}
+            // handleModal={handleModal}
             handleCloseModal={handleCloseModal}
             sizeList={sizeList}
             english_name={english_name}
@@ -96,7 +63,7 @@ function Product({
           <BrandBox>
             <img src={brand_image_url} />
             <span className="bookIcons">
-              {is_wished ? (
+              {is_wished || colorcheck ? (
                 <IoBookmarkSharp />
               ) : (
                 <VscBookmark onClick={handleModal} />

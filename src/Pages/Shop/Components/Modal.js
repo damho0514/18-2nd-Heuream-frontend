@@ -12,7 +12,6 @@ function Modal({ english_name, product_id, sizeList, handleCloseModal }) {
         <GridBox>
           {sizeList.map((el, idx) => (
             <ModalChild
-              onClick={handleCloseModal}
               key={idx}
               size_id={el.size_id}
               size_name={el.size_name}

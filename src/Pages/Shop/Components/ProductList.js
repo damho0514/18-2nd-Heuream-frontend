@@ -2,9 +2,7 @@ import React from "react";
 import Product from "../Components/Product";
 import styled from "styled-components";
 
-function ProductList({ shop, solt }) {
-  // const [ProductContents,setProductContents] = useState();
-
+function ProductList({ shop }) {
   return (
     <MainBox>
       <ProductContents>
@@ -19,7 +17,6 @@ function ProductList({ shop, solt }) {
               price={el.price}
               is_wished={el.is_wished}
               size_id={el.size_id}
-              // getShop={getShop
             />
           );
         })}
