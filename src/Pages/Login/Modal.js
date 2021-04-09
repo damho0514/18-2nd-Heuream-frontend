@@ -50,6 +50,7 @@ const WrapModal = styled.div`
   left: 0;
   right: 0;
   background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1001;
 `;
 
 const ModalContainer = styled.div`
