@@ -6,11 +6,7 @@ function ProductList({ shop }) {
   return (
     <MainBox>
       <ProductContents>
-<<<<<<< HEAD
         {shop.map((el, idx) => {
-=======
-        {sortBy.map((el, idx) => {
->>>>>>> 2afc7eefa29a38e4b9787dcbc36b0e85b593238c
           return (
             <Product
               key={idx}
@@ -21,10 +17,6 @@ function ProductList({ shop }) {
               price={el.price}
               is_wished={el.is_wished}
               size_id={el.size_id}
-<<<<<<< HEAD
-=======
-              getShop={getShop}
->>>>>>> 2afc7eefa29a38e4b9787dcbc36b0e85b593238c
             />
           );
         })}

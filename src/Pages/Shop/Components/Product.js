@@ -1,9 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-<<<<<<< HEAD
 import { useHistory } from "react-router-dom";
-=======
->>>>>>> 2afc7eefa29a38e4b9787dcbc36b0e85b593238c
 import Modal from "./Modal";
 import { VscBookmark } from "react-icons/vsc";
 import { IoBookmarkSharp } from "react-icons/io5";
@@ -16,15 +13,10 @@ function Product({
   brand_image_url,
   english_name,
   price,
-<<<<<<< HEAD
-=======
-  size_id,
->>>>>>> 2afc7eefa29a38e4b9787dcbc36b0e85b593238c
 }) {
   const [modal, setModal] = useState(false);
   const [sizeList, setSizeList] = useState([]);
   const [colorcheck, setColorCheck] = useState(false);
-<<<<<<< HEAD
 
   const history = useHistory();
   //
@@ -44,24 +36,6 @@ function Product({
     } else {
       history.push("/login");
     }
-=======
-  //
-  const history = useHistory();
-
-  const handleModal = () => {
-    // console.log("클릭1");
-    fetch(`http://10.58.7.188:8000/product/${product_id}`, {
-      headers: {
-        Authorization:
-          "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.IOGSFnezOAETXOTTFMJYwb7nv6lG14FqtahkW9ATL7s",
-      },
-    })
-      .then(res => res.json())
-      .then(res => {
-        setSizeList(res.result);
-      });
-    setModal(!modal);
->>>>>>> 2afc7eefa29a38e4b9787dcbc36b0e85b593238c
   };
 
   const handleCloseModal = () => {
@@ -80,10 +54,6 @@ function Product({
             modal={modal}
             handleCloseModal={handleCloseModal}
             sizeList={sizeList}
-<<<<<<< HEAD
-=======
-            product_image_url={product_image_url}
->>>>>>> 2afc7eefa29a38e4b9787dcbc36b0e85b593238c
             english_name={english_name}
             product_id={product_id}
           />
