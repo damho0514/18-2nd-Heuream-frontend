@@ -244,85 +244,6 @@ const RightBox = styled.div`
   }
 `;
 
-const SugestContents = styled.p`
-  width: 100px;
-  display: flex;
-  margin-left: 150px;
-  margin-top: 15px;
-  color: #959595;
-  font-size: 13px;
-`;
-const PriceContents = styled.div`
-  position: relative;
-  .priceMenu {
-    background: #ffffff;
-    position: absolute;
-    top: 60px;
-    width: 180px;
-    height: 210px;
-    overflow: hidden;
-    overflow: auto;
-    box-shadow: 0 0px 0px 1px rgba(0, 0, 0, 0.1);
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.4s ease;
-  }
-
-  .priceActive {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(-11px);
-  }
-  .priceMenu ul {
-    line-height: 2.5;
-    margin-left: 15px;
-    color: #222222cc;
-    .allBrand {
-      font-weight: bold;
-    }
-  }
-  .priceMenu li a {
-    color: #333333;
-    padding: 15px 20px;
-    display: block;
-  }
-`;
-const SizeContents = styled.div`
-  position: relative;
-
-  .SizeMenu {
-    background: #ffffff;
-    position: absolute;
-    top: 60px;
-    width: 180px;
-    height: 210px;
-    overflow: hidden;
-    overflow: auto;
-    box-shadow: 0 0px 0px 1px rgba(0, 0, 0, 0.1);
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.4s ease;
-  }
-  .SizeActive {
-    opacity: 1;
-    visibility: visible;
-    transform: translate(0px, -11px);
-  }
-  .SizeMenu ul {
-    line-height: 2.5;
-    margin-left: 15px;
-    color: #222222cc;
-    .allBrand {
-      font-weight: bold;
-    }
-  }
-  .SizeMenu li a {
-    color: #333333;
-    padding: 15px 20px;
-    display: block;
-  }
-`;
-
 const BrandContents = styled.div`
   position: relative;
 
@@ -356,36 +277,6 @@ const BrandContents = styled.div`
     display: block;
   }
 `;
-const FilterBox = styled.div`
-  width: 100%;
-  position: fixed;
-  z-index: 90;
-  border: 1px solid #ebebeb;
-  background-color: #fff;
-  height: 50px;
-  display: flex;
-`;
-
-const ResetBox = styled.div`
-  border-left: 1px solid #ebebeb;
-  width: 120px;
-  height: 50px;
-  cursor: pointer;
-  .resetIcons {
-    position: absolute;
-    font-size: 13px;
-    transform: rotateY(180deg);
-    width: 55px;
-    margin-top: 15px;
-    font-weight: 1px;
-  }
-  .resetTitle {
-    font-size: 13px;
-    position: absolute;
-    transform: translate(65px, 15px);
-    color: #222222cc;
-  }
-`;
 
 const CategoryBox = styled.div`
   border-right: 1px solid #ebebeb;
@@ -406,47 +297,6 @@ const Title = styled.span`
   position: absolute;
   transform: translate(15px, 15px);
   color: #222222cc;
-`;
-
-const RightBox = styled.div`
-  width: 100px;
-  margin-left: 1000px;
-  margin-top: 10px;
-  position: relative;
-  .sugMenu {
-    background: #ffffff;
-    position: absolute;
-    top: 60px;
-    width: 180px;
-    height: 210px;
-    box-shadow: 0 0px 0px 1px rgba(0, 0, 0, 0.1);
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.4s ease;
-  }
-  .sugActive {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(-34px);
-    width: 220px;
-    padding: 10px;
-  }
-  .sugMenu ul {
-    font-size: 11px;
-    letter-spacing: -0.07px;
-    color: rgba(34, 34, 34, 0.8);
-    line-height: 2;
-    .allBrand {
-      font-weight: bold;
-      font-size: 13px;
-      color: #222222cc;
-    }
-  }
-  .sugMenu p {
-    font-size: 10px;
-    letter-spacing: -0.06px;
-    color: rgba(34, 34, 34, 0.5);
-  }
 `;
 
 const SugestContents = styled.p`
@@ -528,39 +378,6 @@ const SizeContents = styled.div`
   }
 `;
 
-const BrandContents = styled.div`
-  position: relative;
-
-  .menu {
-    background: #ffffff;
-    position: absolute;
-    top: 60px;
-    width: 180px;
-    height: 210px;
-    box-shadow: 0 0px 0px 1px rgba(0, 0, 0, 0.1);
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.4s ease;
-  }
-  .menu.active {
-    opacity: 1;
-    visibility: visible;
-    transform: translate(0px, -11px);
-  }
-  .menu ul {
-    line-height: 2.5;
-    margin-left: 15px;
-    color: #222222cc;
-    .allBrand {
-      font-weight: bold;
-    }
-  }
-  .menu li a {
-    color: #333333;
-    padding: 15px 20px;
-    display: block;
-  }
-`;
 const FilterBox = styled.div`
   width: 100%;
   position: fixed;
@@ -590,27 +407,6 @@ const ResetBox = styled.div`
     transform: translate(65px, 15px);
     color: #222222cc;
   }
-`;
-
-const CategoryBox = styled.div`
-  border-right: 1px solid #ebebeb;
-  border-left: 1px solid #ebebeb;
-  width: 182px;
-  height: 50px;
-  cursor: pointer;
-  .rowIcons {
-    color: rgb(187, 187, 187);
-    position: absolute;
-    font-size: 25px;
-    transform: translate(140px, 10px);
-  }
-`;
-
-const Title = styled.span`
-  font-size: 13px;
-  position: absolute;
-  transform: translate(15px, 15px);
-  color: #222222cc;
 `;
 
 export default Shop;

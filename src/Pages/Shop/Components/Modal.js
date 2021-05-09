@@ -7,7 +7,7 @@ function Modal({ english_name, product_id, sizeList, handleCloseModal }) {
     <MainConteiner>
       <InnerConteiner>
         <Title>관심상품 추가</Title>
-        <Engname>{english_name}</Engname>
+        {english_name}
         <Border></Border>
         <GridBox>
           {sizeList.map((el, idx) => (
