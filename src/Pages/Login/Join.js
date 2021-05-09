@@ -44,7 +44,7 @@ class Join extends React.Component {
   };
 
   signUp = () => {
-    fetch("http://10.58.1.71:8000/account/signup", {
+    fetch("http://192.168.0.34:8000/account/signup", {
       method: "POST",
       body: JSON.stringify({
         email: this.state.email,

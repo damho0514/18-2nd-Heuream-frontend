@@ -29,7 +29,7 @@ class Login extends React.Component {
 
   goToMain = e => {
     //e.preventDefault();
-    fetch("http://10.58.1.71:8000/account/signin", {
+    fetch("http://13.209.87.62:8000/account/signin", {
       method: "POST",
       body: JSON.stringify({
         email: this.state.email,
@@ -40,7 +40,7 @@ class Login extends React.Component {
       .then(res => {
         if (res.message === "SUCCESS") {
           localStorage.setItem("access_token", res.access_token);
-          this.props.history.push("/");
+          this.props.history.push("/shop");
         }
       });
   };
@@ -49,7 +49,7 @@ class Login extends React.Component {
     window.Kakao.Auth.login({
       success: response => {
         console.log(response);
-        fetch("http://10.58.1.71:8000/account/kakaosignin", {
+        fetch("http://13.209.87.62:8000/account/kakaosignin", {
           method: "POST",
           headers: {
             Authorization: response.access_token,
@@ -60,7 +60,7 @@ class Login extends React.Component {
             localStorage.setItem("access_token", res.access_token);
             if (res.access_token) {
               alert("로그인 성공!");
-              this.props.history.push("/");
+              this.props.history.push("/shop");
             }
           });
         window.Kakao.API.request({
