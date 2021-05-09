@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
 import styled from "styled-components";
-import Nav from "../../Components/Nav/Nav";
 import ProductList from "../Shop/Components/ProductList";
 import ButtonPage from "../Shop/Components/ButtonPage";
 import { FaUndo } from "react-icons/fa";

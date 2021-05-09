@@ -7,8 +7,6 @@ const ModalChild = ({ product_id, size_id, size_name, handleBookColor }) => {
   const [bookmark, setBookmark] = useState(false);
 
   const handleBookClick = () => {
-<<<<<<< HEAD
-=======
     fetch(`http://10.58.7.188:8000/product/${product_id}?size_id=${size_id}`, {
       method: "POST",
       headers: {
@@ -16,7 +14,6 @@ const ModalChild = ({ product_id, size_id, size_name, handleBookColor }) => {
           "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.IOGSFnezOAETXOTTFMJYwb7nv6lG14FqtahkW9ATL7s",
       },
     });
->>>>>>> 2afc7eefa29a38e4b9787dcbc36b0e85b593238c
     setBookmark(!bookmark);
   };
 
