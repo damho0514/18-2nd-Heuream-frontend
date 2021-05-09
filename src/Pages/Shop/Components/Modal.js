@@ -7,7 +7,7 @@ function Modal({ english_name, product_id, sizeList, handleCloseModal }) {
     <MainConteiner>
       <InnerConteiner>
         <Title>관심상품 추가</Title>
-        {english_name}
+        <Engname>{english_name}</Engname>
         <Border></Border>
         <GridBox>
           {sizeList.map((el, idx) => (
@@ -26,6 +26,12 @@ function Modal({ english_name, product_id, sizeList, handleCloseModal }) {
 }
 export default Modal;
 
+const Engname = styled.div`
+  margin-left: 123px;
+  height: 30px;
+  line-height: 5;
+  font-weight: bold;
+`;
 const GridBox = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 130px);
