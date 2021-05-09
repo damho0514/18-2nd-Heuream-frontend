@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Loading from "./Components/Loading/Loading";
-import Shop from "../src/Pages/Shop/Shop";
+import Shop from "./Pages/Shop/Shop";
 import Modal from "./Pages/Shop/Components/Modal";
 import Login from "./Pages/Login/Login";
 import Join from "./Pages/Login/Join";

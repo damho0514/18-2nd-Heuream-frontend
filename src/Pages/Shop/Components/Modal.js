@@ -2,12 +2,20 @@ import React from "react";
 import styled from "styled-components";
 import ModalChild from "../Components/ModalChild";
 
+<<<<<<< HEAD
 function Modal({ english_name, product_id, sizeList, handleCloseModal }) {
+=======
+function Modal({ product_id, sizeList, handleCloseModal }) {
+>>>>>>> 2afc7eefa29a38e4b9787dcbc36b0e85b593238c
   return (
     <MainConteiner>
       <InnerConteiner>
         <Title>관심상품 추가</Title>
+<<<<<<< HEAD
         <Engname>{english_name}</Engname>
+=======
+
+>>>>>>> 2afc7eefa29a38e4b9787dcbc36b0e85b593238c
         <Border></Border>
         <GridBox>
           {sizeList.map((el, idx) => (
@@ -26,12 +34,15 @@ function Modal({ english_name, product_id, sizeList, handleCloseModal }) {
 }
 export default Modal;
 
+<<<<<<< HEAD
 const Engname = styled.div`
   margin-left: 123px;
   height: 30px;
   line-height: 5;
   font-weight: bold;
 `;
+=======
+>>>>>>> 2afc7eefa29a38e4b9787dcbc36b0e85b593238c
 const GridBox = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 130px);
@@ -58,7 +69,11 @@ const Closed = styled.div`
 const Border = styled.div`
   border-bottom: ${props => props.theme.border.commonBorder};
   height: 5;
+<<<<<<< HEAD
   height: 32px;
+=======
+  height: 82px;
+>>>>>>> 2afc7eefa29a38e4b9787dcbc36b0e85b593238c
 `;
 const Title = styled.span`
   font-size: 20px;
@@ -68,7 +83,11 @@ const Title = styled.span`
   margin-top: 20px;
 `;
 const MainConteiner = styled.div`
+<<<<<<< HEAD
   z-index: 1001;
+=======
+  z-index: 100;
+>>>>>>> 2afc7eefa29a38e4b9787dcbc36b0e85b593238c
   position: fixed;
   display: flex;
   justify-content: center;
@@ -86,6 +105,7 @@ const InnerConteiner = styled.div`
   background-color: white;
 `;
 
+<<<<<<< HEAD
 // const SIZE = [
 //   { id: 1, size: 220 },
 //   { id: 2, size: 225 },
@@ -106,3 +126,25 @@ const InnerConteiner = styled.div`
 //   { id: 17, size: 295 },
 //   { id: 18, size: 300 },
 // ];
+=======
+const SIZE = [
+  { id: 1, size: 220 },
+  { id: 2, size: 225 },
+  { id: 3, size: 230 },
+  { id: 4, size: 235 },
+  { id: 5, size: 240 },
+  { id: 6, size: 245 },
+  { id: 7, size: 250 },
+  { id: 8, size: 255 },
+  { id: 9, size: 255 },
+  { id: 10, size: 260 },
+  { id: 11, size: 265 },
+  { id: 12, size: 270 },
+  { id: 13, size: 275 },
+  { id: 14, size: 280 },
+  { id: 15, size: 285 },
+  { id: 16, size: 290 },
+  { id: 17, size: 295 },
+  { id: 18, size: 300 },
+];
+>>>>>>> 2afc7eefa29a38e4b9787dcbc36b0e85b593238c
