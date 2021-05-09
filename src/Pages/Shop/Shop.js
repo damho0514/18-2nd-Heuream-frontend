@@ -195,8 +195,8 @@ function Shop() {
             </RightBox>
           </CategoryBox>
         </FilterBox>
-        <ProductList shop={shop} solt={solt} getShop={getShop} />
         <ButtonPage curruntIdx={curruntIdx} handleBtn={handleBtn} />
+        <ProductList shop={shop} solt={solt} getShop={getShop} />
       </section>
     )
   );
